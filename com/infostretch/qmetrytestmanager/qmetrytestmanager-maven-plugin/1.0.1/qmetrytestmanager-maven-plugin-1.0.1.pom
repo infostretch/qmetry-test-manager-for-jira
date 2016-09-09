@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.infostretch.qmetrytestmanager</groupId>
 	<artifactId>qmetrytestmanager-maven-plugin</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>QMetry Test Manager Maven Plugin</name>
 	<packaging>jar</packaging>
 
@@ -96,7 +96,7 @@
 						<include>**/*</include>
 					</includes>
 					<repositoryName>qmetry-test-manager-for-jira</repositoryName>      <!-- github repo name -->
-					<repositoryOwner>qmetry</repositoryOwner>    <!-- github username -->
+					<repositoryOwner>infostretch</repositoryOwner>    <!-- github username -->
 				</configuration>
 				<executions>
 					<!-- run site-maven-plugin's 'site' target as part of the build's normal 
