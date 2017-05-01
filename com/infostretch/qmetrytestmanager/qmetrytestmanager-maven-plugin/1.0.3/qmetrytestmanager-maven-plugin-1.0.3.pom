@@ -97,12 +97,13 @@
 					testcase update support.</message>  <!-- git commit message -->
 					<noJekyll>true</noJekyll>                                <!--   disable webpage processing -->
 					<outputDirectory>D:/WorkSpace/AutoGitprod</outputDirectory> <!-- matches distribution management repository url above -->
-					<branch>refs/heads/mvn-repo</branch>                      <!--  remote branch name -->
+					<branch>refs/heads/mvn-repo</branch> 
+					<merge>true</merge>					<!--  remote branch name -->
 					<includes>
 						<include>**/*</include>
 					</includes>
 					<repositoryName>qmetry-test-manager-for-jira</repositoryName>      <!-- github repo name -->
-					<repositoryOwner>myCodeHurts</repositoryOwner>    <!-- github username -->
+					<repositoryOwner>qmetry</repositoryOwner>    <!-- github username -->
 				</configuration>
 				<executions>
 					<!-- run site-maven-plugin's 'site' target as part of the build's normal 
