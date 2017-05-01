@@ -85,7 +85,7 @@
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>2.8.1</version>
 				<configuration>
-					<altDeploymentRepository>internal.repo::default::file://D:/WorkSpace/AutoGitprod</altDeploymentRepository>
+					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -94,11 +94,11 @@
 				<version>0.11</version>
 				<configuration>
 					<message>
-					testcase update support.</message>  <!-- git commit message -->
+						Bug fixes in latest ${project.version}</message>  <!-- git commit message -->
 					<noJekyll>true</noJekyll>                                <!--   disable webpage processing -->
-					<outputDirectory>D:/WorkSpace/AutoGitprod</outputDirectory> <!-- matches distribution management repository url above -->
-					<branch>refs/heads/mvn-repo</branch> 
-					<merge>true</merge>					<!--  remote branch name -->
+					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+					<branch>refs/heads/mvn-repo</branch>                     <!--  remote branch name -->
+                    <merge>true</merge>
 					<includes>
 						<include>**/*</include>
 					</includes>
@@ -154,9 +154,9 @@
 	</build>
 	<distributionManagement>
 		<repository>
-			<id>github</id>
+			<id>internal.repo</id>
 			<name>Temporary Staging Repository</name>
-			<url>file://D:/WorkSpace/AutoGitprod</url>
+			<url>file://${project.build.directory}/mvn-repo</url>
 		</repository>
 	</distributionManagement>
 	<properties>
@@ -164,3 +164,4 @@
 		<github.global.server>github</github.global.server>
 	</properties>
 </project>
+Close
